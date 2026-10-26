@@ -1,28 +1,29 @@
-# Calculator Pro
+# Scientific Calculator
 
-This is a small front-end calculator project built with HTML, CSS, and JavaScript.
+This project is a modern scientific calculator built with HTML, CSS, and JavaScript. It includes advanced mathematical functions and a clean responsive interface.
 
-## Features
-- Full number pad
-- Addition, subtraction, multiplication, and division
-- Percentage calculation
-- Clear screen and delete last digit
-- Sign toggle
-- Square root, square, reciprocal
-- Memory functions: `MS`, `MR`, `M+`, `M-`, `MC`
-- Keyboard support
-- Responsive modern design
+## Included functions
+- Basic arithmetic: +, -, ×, ÷
+- Parentheses and exponentiation
+- Trigonometric functions: sin, cos, tan
+- Inverse trig: asin, acos, atan
+- Logarithms: log, ln
+- Square root and cube root
+- Power and reciprocal
+- Factorial
+- Constants: π and e
+- Percentage and modulo
+- Memory operations: MS, MR, M+, M−, MC
 
 ## Run locally
 
-1. Open `index.html` directly in the browser, or
-2. Start a local server:
+Open `index.html` directly in the browser, or run a local server:
 
 ```bash
 python3 -m http.server 8000
 ```
 
-Then visit:
+Then open:
 
 ```txt
 http://localhost:8000
@@ -30,19 +31,17 @@ http://localhost:8000
 
 ## Deploy to GitHub Pages
 
-1. Go to your repository settings
-2. Open `Pages`
-3. Choose the deployment source: `Deploy from a branch`
-4. Select the `main` branch and `/root` folder
+1. Open the repository settings
+2. Go to **Pages**
+3. Select **Deploy from a branch**
+4. Choose the `main` branch and `/root` folder
 5. Save
 
-Once enabled, GitHub will provide a live URL.
+GitHub will provide a live URL after deployment.
 
 ## Main files
 - `index.html`
 - `styles.css`
 - `script.js`
-
----
 
 This project is ready for testing and GitHub deployment.

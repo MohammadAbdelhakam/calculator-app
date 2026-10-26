@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculator Pro</title>
+    <title>Scientific Calculator</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;700;800&display=swap" rel="stylesheet" />
@@ -11,47 +11,71 @@
   </head>
   <body>
     <main class="app">
-      <section class="calculator" aria-label="Calculator">
+      <section class="calculator" aria-label="Scientific calculator">
         <div class="display-panel">
-          <div class="memory-indicator" id="memoryStatus">M</div>
-          <div class="display" id="display" aria-live="polite">0</div>
+          <div class="expression" id="expressionDisplay">0</div>
+          <div class="result" id="resultDisplay">0</div>
         </div>
 
         <div class="keys">
           <button class="btn function" data-action="clear">AC</button>
           <button class="btn function" data-action="delete">DEL</button>
-          <button class="btn function" data-action="percent">%</button>
+          <button class="btn function" data-action="parenthesis-open">(</button>
+          <button class="btn function" data-action="parenthesis-close">)</button>
           <button class="btn operator" data-action="divide">÷</button>
 
-          <button class="btn function" data-action="sqrt">√</button>
-          <button class="btn function" data-action="square">x²</button>
-          <button class="btn function" data-action="reciprocal">1/x</button>
+          <button class="btn function" data-action="sin">sin</button>
+          <button class="btn function" data-action="cos">cos</button>
+          <button class="btn function" data-action="tan">tan</button>
+          <button class="btn function" data-action="log">log</button>
           <button class="btn operator" data-action="multiply">×</button>
+
+          <button class="btn function" data-action="asin">asin</button>
+          <button class="btn function" data-action="acos">acos</button>
+          <button class="btn function" data-action="atan">atan</button>
+          <button class="btn function" data-action="ln">ln</button>
+          <button class="btn operator" data-action="subtract">−</button>
+
+          <button class="btn function" data-action="sqrt">√</button>
+          <button class="btn function" data-action="cbrt">∛</button>
+          <button class="btn function" data-action="square">x²</button>
+          <button class="btn function" data-action="cube">x³</button>
+          <button class="btn operator" data-action="add">+</button>
+
+          <button class="btn function" data-action="exp">exp</button>
+          <button class="btn function" data-action="factorial">n!</button>
+          <button class="btn function" data-action="percent">%</button>
+          <button class="btn function" data-action="mod">mod</button>
+          <button class="btn function" data-action="power">xʸ</button>
+
+          <button class="btn function" data-action="pi">π</button>
+          <button class="btn function" data-action="euler">e</button>
+          <button class="btn function" data-action="reciprocal">1/x</button>
+          <button class="btn function" data-action="toggle-sign">±</button>
+          <button class="btn function" data-action="equals">=</button>
 
           <button class="btn number" data-value="7">7</button>
           <button class="btn number" data-value="8">8</button>
           <button class="btn number" data-value="9">9</button>
-          <button class="btn operator" data-action="subtract">−</button>
+          <button class="btn function" data-action="power-of-ten">10ˣ</button>
+          <button class="btn function" data-action="power-e">eˣ</button>
 
           <button class="btn number" data-value="4">4</button>
           <button class="btn number" data-value="5">5</button>
           <button class="btn number" data-value="6">6</button>
-          <button class="btn operator" data-action="add">+</button>
-
           <button class="btn number" data-value="1">1</button>
           <button class="btn number" data-value="2">2</button>
-          <button class="btn number" data-value="3">3</button>
-          <button class="btn operator" data-action="equals">=</button>
 
-          <button class="btn function" data-action="toggle-sign">±</button>
+          <button class="btn number" data-value="3">3</button>
           <button class="btn number" data-value="0">0</button>
           <button class="btn number" data-value=".">.</button>
           <button class="btn function" data-action="memory-clear">MC</button>
+          <button class="btn function" data-action="memory-store">MS</button>
 
           <button class="btn function" data-action="memory-recall">MR</button>
           <button class="btn function" data-action="memory-add">M+</button>
           <button class="btn function" data-action="memory-subtract">M−</button>
-          <button class="btn function" data-action="memory-store">MS</button>
+          <button class="btn function" data-action="memory-show">M</button>
         </div>
       </section>
     </main>
