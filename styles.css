@@ -1,0 +1,152 @@
+:root {
+  --bg-dark: #101827;
+  --panel-dark: #111827;
+  --panel-light: #1f2937;
+  --primary: #8b5cf6;
+  --primary-dark: #7c3aed;
+  --secondary: #22c55e;
+  --accent: #f59e0b;
+  --text: #f3f4f6;
+  --muted: #94a3b8;
+  --shadow: rgba(15, 23, 42, 0.6);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #0f172a 0%, #111827 52%, #1e293b 100%);
+  font-family: "Cairo", sans-serif;
+  color: var(--text);
+}
+
+.app {
+  width: min(420px, 100%);
+}
+
+.calculator {
+  background: rgba(17, 24, 39, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 28px;
+  box-shadow: 0 25px 60px var(--shadow);
+  overflow: hidden;
+}
+
+.display-panel {
+  background: linear-gradient(180deg, #0f172a, #111827);
+  min-height: 140px;
+  padding: 18px 20px 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.memory-indicator {
+  align-self: flex-start;
+  color: var(--accent);
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  min-width: 28px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.18s ease;
+}
+
+.memory-indicator.active {
+  opacity: 1;
+}
+
+.display {
+  width: 100%;
+  text-align: left;
+  font-size: clamp(2.2rem, 4vw, 3.1rem);
+  font-weight: 800;
+  line-height: 1.2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  direction: ltr;
+  user-select: none;
+}
+
+.keys {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  padding: 18px;
+  background: rgba(15, 23, 42, 0.9);
+}
+
+.btn {
+  border: none;
+  border-radius: 18px;
+  min-height: 66px;
+  font-family: "Cairo", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.12s ease, filter 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.btn:hover {
+  filter: brightness(1.05);
+}
+
+.btn:active {
+  transform: translateY(1px) scale(0.99);
+}
+
+.number {
+  background: #1f2937;
+  color: var(--text);
+}
+
+.operator {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: white;
+}
+
+.function {
+  background: #111827;
+  color: var(--text);
+}
+
+.btn[data-action="equals"] {
+  background: linear-gradient(135deg, var(--secondary) 0%, #16a34a 100%);
+}
+
+.btn[data-action="clear"] {
+  background: linear-gradient(135deg, #f97316, #ea580c);
+}
+
+.btn[data-action="delete"] {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+@media (max-width: 440px) {
+  .calculator {
+    border-radius: 20px;
+  }
+
+  .keys {
+    gap: 8px;
+    padding: 12px;
+  }
+
+  .btn {
+    min-height: 56px;
+    border-radius: 14px;
+  }
+}
